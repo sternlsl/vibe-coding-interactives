@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive learning tools</title>
+
+    <!-- Google Fonts (Preferred per LSL guide) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* LSL Brand Colors (p.4) */
+            --main-teal: #00B5A8;
+            --dark-accent: #10998C;
+            --light-bg: #F7F8FB;
+            --mid-gray: #666666;
+            --dark-gray: #333333;
+            --line-gray: #DCE0E9;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-gray);
+        }
+
+        header {
+            background-color: var(--main-teal);
+            color: var(--white);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin: 0 0 0.75rem 0;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle drop shadow per p.7 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--mid-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .card a {
+            text-decoration: underline; /* per link guidance p.8 */
+            color: var(--dark-accent);   /* darkest accent */
+            font-weight: 500;
+        }
+
+        .card a:focus,
+        .card a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--mid-gray);
+            border-top: 2px solid var(--line-gray); /* 2px line per p.7 */
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Interactive learning tools</h1>
+    <p>
+        Explore applied, interactive visualizations designed to support
+        conceptual understanding in operations, strategy, and decision-making.
+        Each tool below opens a standalone educational experience.
+    </p>
+</header>
+
+<main>
+    <section class="card-grid">
+
+        <div class="card">
+            <h2>Batch sizing</h2>
+            <p>
+                Experiment with production and inventory tradeoffs to understand
+                how batch size decisions influence cost, flow, and operational
+                efficiency.
+            </p>
+            <a href="batch-sizing.html">Open batch sizing tool</a>
+        </div>
+
+        <div class="card">
+            <h2>Game theory</h2>
+            <p>
+                Explore strategic interaction through interactive payoff
+                structures and dynamic decision scenarios.
+            </p>
+            <a href="game-theory.html">Open game theory tool</a>
+        </div>
+
+        <div class="card">
+            <h2>Authenticity visualization</h2>
+            <p>
+                Visualize the multidimensional components of authenticity and
+                observe how shifts across dimensions influence perceived outcomes.
+            </p>
+            <a href="authenticity-visualization.html">Open authenticity visualization</a>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    Learning Science Lab · Interactive resources
+</footer>
+
+</body>
+</html>
